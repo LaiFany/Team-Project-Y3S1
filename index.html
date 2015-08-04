@@ -1,0 +1,143 @@
+<html !DOCTYPE>
+	<head>
+		<script src="Javascript/jquery-1.11.3.js"></script>
+		<script src="jquery-flipster-master/src/js/jquery.flipster.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery-flipster-master/src/css/jquery.flipster.css">
+		
+		<link rel = "stylesheet" type = "text/css" href = "CSS/style.css"> 
+		<script src="Javascript/changeBtn.js"></script>
+	</head>
+	<body>
+		<style>
+			body{
+				background : url(HLB-Interactive/images/bg/bg_p.jpg) no-repeat center center fixed;
+				background-size : cover;
+				overflow : hidden;
+			}
+		</style>
+		<div id = "hlbLogo">
+			<img src = "HLB-Interactive/images/bg/hlb_logo.gif">
+		</div>
+		<div class="coverflow" id = "coverflow">
+			<ul>
+			<li>
+			<div> <img id = "img1" src="HLB-Interactive/promo/0.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/1.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/2.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/3.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/4.jpg"> </div>
+			</li>
+			
+			<li>
+			<div> <img src="HLB-Interactive/promo/6.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/7.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Autoloan-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/BT-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Debit-Card-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/FlexiFD-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Housing-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Junior-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img style = "height : 550px" src="HLB-Interactive/promo/NEW-CI_SME-Banking_ATM-Screen_640x480px-01.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Pay&Save-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Plat-Biz-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Ploan-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Shop-Loan-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/SuperRemit-Poster.jpg"> </div>
+			</li>
+			<li>
+			<div> <img src="HLB-Interactive/promo/Wise-Poster.jpg"> </div>
+			</li>
+			</ul>
+		</div>
+		<script>
+			$(document).ready( function() {
+			$(".coverflow").flipster();
+			});
+		</script>
+		<div id = "menuList">
+			<ul>
+				<li><button onClick = "triggerAboutList()">About</button></li>
+				<li><button onClick = "triggerPfsList()">Personal Finance Service</button></li>
+				<li><button onClick = "triggerBcbList()">Business & Corporate Banking</button></li>
+				<li><button onClick = "triggerHlcList()">Hong Leong Connect</button></li>
+			</ul>
+		</div>
+		<div id = "aboutList">
+			<ul>
+				<li><button class = "title" href = "#">About</button></li>
+				<li><a href = "storyHLB.html" id = "1">Story of Hong Leong Bank</a></li>
+			</ul>
+		</div>
+		<div id = "pfsList">
+			<ul>
+				<li><button class = "title">Personal Finance Service</button></li>
+				<li><a href = "creditCards.html" id = "2">Credit Cards</a></li>
+				<li><a href = "debitCards.html" id = "3">Debit Cards</a></li>
+				<li><a href = "fixedDeposits.html" id = "4">Fixed Deposits</a></li>
+				<li><a href = "deposits.html" id = "5">Deposits</a></li>
+				<li><a href = "bancassurance.html" id = "6">Bancassurance</a></li>
+				<li><a href = "loans.html" id = "7">Loans</a></li>
+				<li><a href = "priorityBanking.html" id = "8">Priority Banking</a></li>
+				<li><a href = "investments.html" id = "9">Investments</a></li>
+			</ul>
+		</div>
+		<div id = "bcbList">
+			<ul>
+				<li><button class = "title">Business & Corporate Banking</button></li>
+				<li><a href = "businessCorporateLoans.html" id = "10">Business & Corporate Loans</a></li>
+				<li><a href = "businessDeposits.html" id = "11">Business Deposits</a></li>
+				<li><a href = "tradeServices.html" id = "12">Trade Services</a></li>
+				<li><a href = "cashManagement.html" id = "13">Cash Management</a></li>
+				<li><a href = "hlbSme.html" id = "14">HLB SME</a></li>
+			</ul>
+		</div>
+		<div id = "hlcList">
+			<ul>
+				<li><button class = "title" href = "#">Hong Leong Connect</button></li>
+				<li><a href = "onlineBanking.html" id = "15">Online Banking</a></li>
+				<li><a href = "mobileBanking.html" id = "16">Mobile Banking</a></li>
+				<li><a href = "pex.html" id = "17">PEx Payment Express</a></li>
+				<li><a href = "hleBroking.html" id = "18">HLe Broking</a></li>
+			</ul>
+		</div>
+		<div>
+			<button id = "exploreBtn" onClick = "changeBtnToClose()"><img src = "HLB-Interactive/images/icon/icon_plus.png" /><span id = "explore">EXPLORE</span></button>
+			<button id = "closeBtn" onClick = "changeBtnToExplore()"><img src = "HLB-Interactive/images/icon/icon_close.png" /><span id = "close">CLOSE</span></button>
+			<button id = "backBtn" onClick = "changeBtnToClose()"><img src = "HLB-Interactive/images/icon/icon_arrow_right.png" /><span id = "back">BACK</span></button>
+		</div>
+	</body>
+</html>

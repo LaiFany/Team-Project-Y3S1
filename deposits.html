@@ -1,0 +1,651 @@
+<html !DOCTYPE>
+	<head>
+		<script src="Javascript/jquery-1.11.3.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "CSS/style.css"> 
+		<script src="Javascript/changeBtn.js"></script>
+	</head>
+	<body>
+		<style>
+			body{
+				background : url(HLB-Interactive/images/bg/bg12.jpg) no-repeat center center fixed;
+				background-size : cover;
+			}
+		</style>
+		<div id = "hlbLogo">
+			<img src = "HLB-Interactive/images/bg/hlb_logo.gif">
+		</div>
+		<div id = "sideImage">
+			<img id = "basicSavingsAccImg" src = "HLB-Interactive/images/content/pfs/side/hlb_basicsavingsacc.jpg">
+			<img id = "basicCurrentAccImg" src = "HLB-Interactive/images/content/pfs/side/hlb_basiccurrentacc.jpg">
+			<img id = "oneAccImg" src = "HLB-Interactive/images/content/pfs/side/hlb_oneaccount.jpg">
+			<img id = "payAndSaveAccImg" src = "HLB-Interactive/images/content/pfs/side/hlb_pay&saveacc.jpg">
+		</div>
+		<div id = "depositsHtml">
+			<div class = "container" id = "hongLeongBasicSavingsAccount">
+				<h1>Hong Leong Basic Savings Account</h1>
+				<div class = "mainScrollBox" id = "hongLeongBasicSavingsAccountTopMainScrollBox">
+					There are times when we need things that go back to basic.
+				</div>
+				<div class = "subTab" id = "hongLeongBasicSavingsAccountSubTab">
+					<ul>
+						<li><button id = "basicSavingsAccountFeaturesBtn" onClick = "basicSavingsAccountFeaturesSubTab()">Features</button></li>
+						<li><button id = "basicSavingsAccountEligibilityBtn" onClick = "basicSavingsAccountEligibilitySubTab()">Eligibility</button></li>
+						<li><button id = "basicSavingsAccountFeesBtn" onClick = "basicSavingsAccountFeesSubTab()">Fees</button></li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicSavingsAccountFeaturesScrollBox">
+					<p><strong>Earn interest on every ringgit</strong></p>
+
+					<p><strong></strong><br />Interest is calculated daily and paid half-yearly.<br />
+
+					Check out our interest rates (http://www.hlb.com.my/qa/ir/irsa.jsp) now.</p>
+
+					<p><br /><strong>Low initial deposit</strong><br />
+
+					You can open your account with just RM20.</p>
+
+					<p><br /><strong>Convenient access to your account</strong><br />
+
+					For your convenience, you can conduct your banking via our nationwide branches, ATM network, Hong Leong Connect, Hong Leong Phone Banking and Hong Leong Mobile Banking.</p>
+
+					<p><em>Eligible for Protection by PIDM</em></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicSavingsAccountEligibilityScrollBox">
+					<ul>
+						<li>Only applicable to Malaysian citizens and permanent residents, age 18 years and above.</li>
+						<li>Accountholders can be single-named or joint.</li>
+						<li>This account is NOT applicable to non-residents, societies, clubs and associations.</li>
+						<li>Minimum RM20 to open the account.</li>
+					</ul>
+						<p><strong>More Information</strong></p>
+
+						<p>Call our Hong Leong Contact Centre at 1800-38-8888 or visit our nearest branch now.</p>
+
+						<p>Click here to view Bank Negara's press release on Basic Banking Services.</p>
+
+						<p><em>Eligible for Protection by PIDM</em></p>
+						<p></p>
+						<p></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicSavingsAccountFeesScrollBox">
+					<table class="general" width="100%">
+					  <tbody>
+						<tr>
+						  <th width="50%">Description / Service</th>
+						  <th width="50%">Charges / Fees</th>
+						</tr>
+						<tr class="table_row">
+						  <td><strong>Over-the-counter (OTC) Visits (per month)</strong> <br>
+							<br>
+							First 6 OTC visits <br><br>
+						  From the 7th OTC onwards              </td>
+						  <td><br><br><br>Free <br><br>
+						  Waive until further notice</td>
+						</tr>
+						<tr>
+						  <td valign="top"><p>Interbank GIRO (IBG)<br>
+						</p>
+							  <ul class="arrow-list">
+								<li>Online<br>
+						  &nbsp;</li>
+								<li>Over-the-counter</li>
+							</ul></td>
+						  <td><p><br>
+						</p>
+							  <p>RM0.10 per transaction<br>
+								  <br>
+				  RM0.50 per transaction<br>
+							</p></td>
+						</tr>
+						<tr class="table_row">
+						  <td>Close Account </td>
+						  <td>RM20 (within 3 months from opening) </td>
+						</tr>
+						<tr>
+						  <td valign="top">Dormant Account <br>
+				(no activity for 12 months and above)</td>
+						  <td valign="top"> <strong>Balance of RM10 and below </strong><br>
+				- Account closed and balance absorbed as charge<br>
+				<br>
+				<strong>Balance above RM10</strong><br>
+				- RM10 yearly </td>
+						</tr>
+						<tr>
+						  <td><strong>Automated Teller Machine (ATM) Card / Debit Card</strong></td>
+						  <td>&nbsp;</td>
+						</tr>
+						<tr class="table_row">
+						  <td valign="top"><p>Annual Fee</p></td>
+						  <td><p>No charge</p></td>
+						</tr>
+						<tr>
+						  <td>Conversion/upgrade from ATM Card to Debit Card </td>
+						  <td> RM8 per card </td>
+						</tr>
+						<tr class="table_row">
+						  <td> Card Replacement Fee (Replacement to Debit Card) </td>
+						  <td>RM12 (For damaged ATM / Debit Card due to customer's fault, PIN forgotten and lost/stolen card.) <br>
+							  <br>
+					RM12 for MEPS Cash refund purpose </td>
+						</tr>
+
+						<tr>
+						  <td width="50%"> <strong>ATM Cash Withdrawal </strong> </td>
+						  <td width="50%">&nbsp;</td>
+						</tr>
+						<tr class="table_row">
+						  <td><strong>Domestic </strong><br>
+							  <br>
+					HLB/HLISB ATM <br>
+					Other Bank's ATM </td>
+						  <td><br>
+							  <br>
+							  FREE <br>
+					RM1 per transaction </td>
+						</tr>
+						<tr>
+						  <td><strong>International </strong><br>
+							  <br>
+					via MEPs ATM Network &nbsp; <br>
+					(Indonesia, Singapore, Thailand and Korea) </td>
+						  <td><br>
+							  <br>
+							  RM8 per transaction </td>
+						</tr>
+				</tbody>
+			  </table>
+				</div>
+			</div>
+			<div class = "container" id = "hongLeongBasicCurrentAccount">
+				<h1>Hong Leong Basic Current Account</h1>
+				<div class = "mainScrollBox" id = "hongLeongBasicCurrentAccountTopMainScrollBox">
+					There are times where we need to go back to the basics.
+				</div>
+				<div class = "subTab" id = "hongLeongBasicCurrentAccountSubTab">
+					<ul>
+						<li><button id = "basicCurrentAccountMainBtn" onClick = "basicCurrentAccountMainSubTab()">Main</button></li>
+						<li><button id = "basicCurrentAccountFeaturesBtn" onClick = "basicCurrentAccountFeaturesSubTab()">Features</button></li>
+						<li><button id = "basicCurrentAccountEligibilityBtn" onClick = "basicCurrentAccountEligibilitySubTab()">Eligibility</button></li>
+						<li><button id = "basicCurrentAccountFeesBtn" onClick = "basicCurrentAccountFeesSubTab()">Fees</button></li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicCurrentAccountMainScrollBox">
+					<p>Who it's for?</p>
+
+					<ul>
+						<li>You are opening your first current account.</li>
+						<li>You want a hassle free current account for that satisfies your basic banking needs.</li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicCurrentAccountFeaturesScrollBox">
+					<p><strong>Low initial deposit</strong><br />
+
+					You can open your account with just RM500.</p>
+
+					<p><strong>Cheque book facility</strong><br />
+
+					Cheque book will be provided upon opening of account.</p>
+
+					<p><strong>Free monthly account statement</strong></p>
+
+					<p><strong>Convenient access to your account</strong></p>
+
+					<p>For your convenience, you can conduct your banking via our nationwide branches, ATM network, Hong Leong Phone Banking and Hong Leong Connect.</p>
+
+					<p><strong>Note: This account does not come with Overdraft facility</strong></p>
+
+					<p><em>Eligible for Protection by PIDM</em></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicCurrentAccountEligibilityScrollBox">
+					<ul>
+						<li>Only applicable to Malaysian citizens and permanent residents, age 18 years and above and foreigners with valid documentation.</li>
+
+						<li>Each accountholder can only hold one Basic Current Account with the bank, either single or joint name.</li>
+
+						<li>This account is NOT applicable to non-residents, societies, companies, clubs and associations.</li>
+
+						<li>As per current practice, you need to produce an Introducer upon opening of the account.</li>
+
+						<li>Minimum RM500 to open the account.</li>
+
+					</ul>
+						<p><strong>More Information</strong></p>
+
+						<p>Call our Hong Leong Contact Centre at 1800-38-8888 or visit our nearest branch now.</p>
+
+						<p>Click here to view Bank Negara's press release on Basic Banking Services.</p>
+
+						<p><em>Eligible for Protection by PIDM</em></p>
+
+						<p></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongBasicCurrentAccountFeesScrollBox">
+					<table class="general" width="100%">
+					  <tbody>
+						<tr>
+						  <th width="50%">Description / Service</th>
+						  <th width="50%">Charges / Fees</th>
+						</tr>
+						<tr class="table_row">
+						  <td><strong>Over-the-counter (OTC) Visits (per month)</strong> <br>
+							<br>
+							First 6 OTC visits <br>
+							<br>
+							From the 7th OTC onwards </td>
+						  <td><br>
+							<br>
+							<br>
+							Free <br>
+							<br>
+							Waive until further notice</td>
+						</tr>
+						<tr>
+						  <td valign="top"><p>Interbank GIRO (IBG)<br>
+							  </p>
+							<ul class="arrow-list">
+							  <li>Online<br>
+								&nbsp;</li>
+							  <li>Over-the-counter</li>
+							</ul></td>
+						  <td><p><br>
+							  </p>
+							<p>RM0.10 per transaction<br>
+							  <br>
+							  RM0.50 per transaction<br>
+							</p></td>
+						</tr>
+						<tr class="table_row">
+						  <td>Close Account </td>
+						  <td>RM20 (within 3 months from opening) </td>
+						</tr>
+						<tr>
+						  <td valign="top">Dormant Account <br>
+							(no activity for 12 months and above)</td>
+						  <td valign="top"><strong>Balance of RM10 and below </strong><br>
+							- Account closed and balance absorbed as charge<br>
+							<br>
+							<strong>Balance above RM10</strong><br>
+							- RM10 yearly </td>
+						</tr>
+						<tr>
+						  <td><strong>Automated Teller Machine (ATM) Card / Debit Card</strong></td>
+						  <td>&nbsp;</td>
+						</tr>
+						<tr class="table_row">
+						  <td valign="top"><p>Annual Fee</p></td>
+						  <td><p>No charge</p></td>
+						</tr>
+						<tr>
+						  <td>Conversion/upgrade from ATM Card to Debit Card </td>
+						  <td> RM8 per card </td>
+						</tr>
+						<tr class="table_row">
+						  <td> Card Replacement Fee (Replacement to Debit Card) </td>
+						  <td>RM12 (For damaged ATM / Debit Card due to customer's fault, PIN forgotten and lost/stolen card.) <br>
+							<br>
+							RM12 for MEPS Cash refund purpose </td>
+						</tr>
+						<tr>
+						  <td width="50%"><strong>ATM Cash Withdrawal </strong></td>
+						  <td width="50%">&nbsp;</td>
+						</tr>
+						<tr class="table_row">
+						  <td><strong>Domestic </strong><br>
+							<br>
+							HLB/HLISB ATM <br>
+							Other Bank's ATM </td>
+						  <td><br>
+							<br>
+							FREE <br>
+							RM1 per transaction </td>
+						</tr>
+						<tr>
+						  <td><strong>International </strong><br>
+							<br>
+							via MEPs ATM Network &nbsp; <br>
+							(Indonesia, Singapore, Thailand and Korea) </td>
+						  <td><br>
+							<br>
+							RM8 per transaction </td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+			<div class = "container" id = "hongLeongOneAccount">
+				<h1>Hong Leong One Account</h1>
+				<div class = "mainScrollBox" id = "hongLeongOneAccountTopMainScrollBox">
+					Own a savings and a current account? Why not combine the two? The Hong Leong One Account not only gives you the flexibility to earn good interest but also lets you enjoy the convenience of checking facility.
+				</div>
+				<div class = "subTab" id = "hongLeongOneAccountSubTab">
+					<ul>
+						<li><button id = "oneAccountMainBtn" onClick = "oneAccountMainSubTab()">Main</button></li>
+						<li><button id = "oneAccountFeaturesBtn" onClick = "oneAccountFeaturesSubTab()">Features</button></li>
+						<li><button id = "oneAccountEligibilityBtn" onClick = "oneAccountEligibilitySubTab()">Eligibility</button></li>
+						<li><button id = "oneAccountFeesBtn" onClick = "oneAccountFeesSubTab()">Fees</button></li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "hongLeongOneAccountMainScrollBox">
+					Who it's for?
+					<ul>
+					<li>Professionals, managers, executives and business owners who wants a consolidated account to manage their finances easily.</li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "hongLeongOneAccountFeaturesScrollBox">
+					<p><strong>Attractive Interest Rate</strong></p>
+
+					<p>Push your money to work harder with the Hong Leong One Account. You earn attractive interest calculated daily based on a multi-tiered interest rate, which is accumulated and credited into your account at the end of every month. The more you save, the more you earn.</p>
+
+					<p>Check out our interest rates now.</p>
+
+					<p><strong>Overdraft Facility</strong></p>
+
+					<p>The overdraft facility is available on application basis* and is secured against the Fixed Deposit placement with Hong Leong Bank. 100% margin of financing. Now, you don't have to uplift your Fixed Deposit prematurely if you're short of funds! Just apply for the overdraft facility at your home branch.</p>
+
+					<p><strong>Consolidated Account Statement</strong><br />
+
+					You can have the option of a Consolidated Account Statement. With this statement, you can track your One Account transactions and also your other Hong Leong Bank financial balances - loans, unit trusts, investments, credit cards and other deposit accounts - in a single statement.</p>
+
+					<p>Click here for more information on the Consolidated Account Statement.</p>
+
+					<p><strong>Easy Access (ATM)</strong></p>
+
+					<p>Convenience of using the Hong Leong Debit Card at our Auto Teller Machine facility (ATM) - 24 hours a day, 7 days a week. Apart from accessing your account via the ATM to pay your monthly bills and make fund transfers, you can also do so through the following modes:</p>
+					<ul>
+					<li>Online Banking (Internet Banking)</li>
+					<li>Phone Banking</li>
+					<li>Mobile Banking</li>
+					</ul>
+					<p><strong>Cheque Book Provided</strong></p>
+
+					<p>Note : * Revised feature effective 4 January 2013.</p>
+
+					<p><em>Eligible for Protection by PIDM</em></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongOneAccountEligibilityScrollBox">
+					<ul>
+						<li>For 18 years and above.</li>
+						<li>Minimum of RM1,000 to open the account.</li>
+						<li>The Hong Leong One Account must be operated as a personal account, either on individual or joint basis.</li>
+					</ul>
+						<p><strong>More Information</strong></p>
+
+						<p>Call our Hong Leong Contact Centre at 1-800-38-8888 or visit our nearest branch now.</p>
+
+						<p><em>Eligible for Protection by PIDM</em></p>
+
+						<p></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongOneAccountFeesScrollBox">
+					<table width="100%" class="general">
+					  <tbody>
+						<tr>
+						  <th width="17">&nbsp;</th>
+						  <th width="234"><strong>Description / Service</strong></th>
+						  <th width="301"><strong>Charges / Fees</strong></th>
+						</tr>
+						<tr class="table_row">
+						  <td valign="top">&nbsp;</td>
+						  <td valign="top"><p>Interbank GIRO (IBG)<br>
+							  </p>
+							<ul class="arrow-list">
+							  <li>Online<br>
+								&nbsp;</li>
+							  <li>Over-the-counter</li>
+							</ul></td>
+						  <td valign="top"><p><br>
+							</p>
+							<p>RM0.10 per transaction<br>
+							  <br>
+							  RM2.00 per transaction</p></td>
+						</tr>
+						<tr>
+						  <td>&nbsp;</td>
+						  <td>Service Charge <br>
+							(where average monthly balance is below RM1,000)</td>
+						  <td> RM5 per month </td>
+						</tr>
+						<tr class="table_row">
+						  <td valign="top">&nbsp;<br>
+							<br>
+							a)<br>
+							<br>
+							<br>
+							<br>
+							b)<br>
+							<br>
+							<br>
+							<br>
+							c)</td>
+						  <td><strong>Overdraft Facility </strong><br>
+							<br>
+							Prescribe Rate <br>
+							(Interest payable on utilisation of OD)<br>
+							<br>
+							Excess Rate <br>
+							(Interest payable on overdrawn OD limit)<br>
+							<br>
+							Commitment Fee <br>
+							(Interest payable on unutilised OD in excess of RM250,000) </td>
+						  <td>&nbsp;<br>
+							<br>
+							1% p.a. above BLR on daily rest on the utilised OD amount<br>
+							<br>
+							<br>
+							4% p.a. above BLR on daily rest on the amount drawn in excess of the approved OD limit<br>
+							<br>
+							1% p.a. on daily rest on the unutilised OD amount. (wef 18 March 2013) </td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+			<div class = "container" id = "hongLeongPayAndSaveAccount">
+				<h1>Hong Leong Pay&Save Account</h1>
+				<div class = "mainScrollBox" id = "hongLeongPayAndSaveAccountTopMainScrollBox">
+					Introducing the 1st Savings Account that gives you up to 3.1%p.a. interest when you pay your bills.
+				</div>
+				<div class = "subTab" id = "hongLeongPayAndSaveAccountSubTab">
+					<ul>
+						<li><button id = "payAndSaveAccountMainBtn" onClick = "payAndSaveAccountMainSubTab()">Main</button></li>
+						<li><button id = "payAndSaveAccountFeaturesBtn" onClick = "payAndSaveAccountFeaturesSubTab()">Features</button></li>
+						<li><button id = "payAndSaveAccountEligibilityBtn" onClick = "payAndSaveAccountEligibilitySubTab()">Eligibility</button></li>
+						<li><button id = "payAndSaveAccountFeesBtn" onClick = "payAndSaveAccountFeesSubTab()">Fees</button></li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "hongLeongPayAndSaveAccountMainScrollBox">
+					Get paid as high as fixed deposit on your savings balance when you make e-Payment for utilities, phone, Astro, Credit Card, Housing Loan, Car Loan or even Personal Loan from your Hong Leong Pay&Save Account. What's more? The more bills you pay, the more you save with extra interest! How to make e-payments? Simply sign up for a Standing Instruction, perform IBG or online bill payment.
+				</div>
+				<div class = "scrollBox" id = "hongLeongPayAndSaveAccountFeaturesScrollBox">
+					<p><strong>1. Earn Up to 3.1%p.a. interest</strong><br />
+					
+					Get paid as high as fixed deposit interest on your account balance.<br />(Eg. Up to 1.2%p.a. Savings Interest + Up to 1.9%p.a. e-Xtra Interest)</p>
+
+					<p>&nbsp; &nbsp;i. <strong>Savings Interest</strong><br />
+					&nbsp; &nbsp; &nbsp; Watch your savings grow with our attractive interest rates; calculated daily and credited quarterly. 
+					&nbsp; &nbsp; &nbsp; Check out our interest rates now.</p>
+
+					<p>&nbsp; &nbsp;ii. <strong>e-Xtra Interest</strong><br />
+					&nbsp; &nbsp; &nbsp; Applicable when you make e-Payment. Interest is calculated monthly and credited in the following 
+					&nbsp; &nbsp; &nbsp; month.</p>
+
+					<p>Complicated table</p>
+					<p>http://www.hlb.com.my/pfs/dep/deppaynsave_f.jsp?flag=deppaynsave</p>
+
+					<p>&nbsp; &nbsp;iii. <strong>10%p.a. Bonus Interest</strong></p>
+					<ul>
+					<li>Enjoy 10%p.a. Bonus Interest when you use this account for salary crediting via Hong Leong e-Payment Service (Payroll Account).</li>
+					<li>Bonus Interest is awarded for 5 days only from day 1 to 5 end day balances based on the first salary, bonus, allowance or medical claim credited into the account every month via the HL Payroll Account.</li>
+					</ul><p><em>
+					&nbsp; &nbsp;*Minimum end day balance to qualify for the Bonus Interest is RM1,000 and maximum is RM15,000. &nbsp; &nbsp; Interest is calculated daily and credited quarterly</em></p>
+
+					<p><em></em><br /><strong>2. Save more when you pay your bills</strong><br />
+
+					The more e-Payments you make from your Hong Leong Pay&amp;Save Account or Debit Card, the more you save.</p>
+
+					<p>Complicated table</p>
+					<p>http://www.hlb.com.my/pfs/dep/deppaynsave_f.jsp?flag=deppaynsave</p>
+
+					<p><strong>3. Easy e-Payments</strong></p>
+					<ul>
+					<li>Standing Instruction</li>
+					<li>IBG via online</li>
+					<li>Online bill payment</li>
+					</ul>
+					<p><strong>4. 24/7 Online Access</strong><br />
+
+					Convenient access to your account</p>
+
+					<p><strong>5. Free Debit Card + Free Touch'n Go Zing Debit Card</strong><br />
+
+					<em>*Free Debit Card is applicable for first year only</em></p>
+
+					<p><strong>6. Cheque book</strong><br />
+
+					Optional upon account opening</p>
+
+					<p><strong>7. Free bi-monthly statement</strong><br />
+
+					Keep track of your finances</p>
+
+					<p><em>Eligible for Protection by PIDM</em></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongPayAndSaveAccountEligibilityScrollBox">
+					<ul>
+						<li>18 years old and above</li>
+						<li>For individuals, either on single or joint-name basis</li>
+						<li>Minimum of RM200 to open the account</li>
+					</ul>
+					<p>For more Information, please call 1-800-38-8888 or visit any of our branches now.</p>
+
+					<p><em>Eligible for Protection by PIDM</em></p>
+				</div>
+				<div class = "scrollBox" id = "hongLeongPayAndSaveAccountFeesScrollBox">
+					<table class="general">
+					  <tbody>
+						<tr>
+						  <th width="355" valign="top"><strong>Description / Service</strong></th>
+						  <th width="252" valign="top"><strong>Charges / Fees </strong></th>
+						</tr>
+						<tr class="table_row">
+						  <td valign="top"><p>Interbank GIRO (IBG)<br>
+							  </p>
+							<ul class="arrow-list">
+							  <li>Online<br>
+								&nbsp;</li>
+							  <li>Over-the-counter</li>
+							</ul></td>
+						  <td><p><br>
+							  </p>
+							<p>RM0.10 per transaction<br>
+							  <br>
+							  RM2.00 per transaction<br>
+							</p></td>
+						</tr>
+						<tr>
+						  <td width="355" valign="top">Service Charge <br>
+							<span class="style3">(where average balance for half year is below RM200) </span></td>
+						  <td width="252" valign="top">RM5 half yearly <span class="style3">(June and December)</span></td>
+						</tr>
+						<tr class="table_row">
+						  <td valign="top">Over The Counter Cash withdrawal or Cheque Encashment at domicile or inter-branch <br>
+							<span class="style3">(by 1st party)</span><strong></strong></td>
+						  <td valign="top">RM5 per transaction<span class="style3">*</span><br>
+							<span class="style5">*RM5 is waived until further notice </span></td>
+						</tr>
+						<tr>
+						  <td width="355" valign="top">Debit Card Annual Fee </td>
+						  <td width="252" valign="top">RM8 <br>
+							<span class="style3">(Waived for the first year) </span></td>
+						</tr>
+						<tr class="table_row">
+						  <td width="355" valign="top">Touch'n Go Zing Debit Card Auto Reload </td>
+						  <td width="252" valign="top">RM0.50 per auto-reload </td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+			<div>
+				<div>
+					<button id = "prev">PREV</button>
+					<button id = "more">MORE</button>
+				</div>
+				<div class = "navBar" id = "depositsNavBar">
+					<div id = "list">
+						<ul>
+							<li><button id = "hongLeongBasicSavingsAccountBtn" onClick = "hongLeongBasicSavingsAccountTab()">Hong Leong Basic Savings Account</button></li>
+							<li><button id = "hongLeongBasicCurrentAccountBtn" onClick = "hongLeongBasicCurrentAccountTab()">Hong Leong Basic Current Account</button></li>
+							<li><button id = "hongLeongOneAccountBtn" onClick = "hongLeongOneAccountTab()">Hong Leong One Account</button></li>
+							<li><button id = "hongLeongPayAndSaveAccountBtn" onClick = "hongLeongPayAndSaveAccountTab()">Hong Leong Pay & Save Account</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<script>
+				$("#more").click(function(){
+					event.preventDefault();
+					$("#list").animate({
+						marginLeft: "-=100px"
+					}, "fast");
+				});
+			</script>	
+		</div>
+		<div id = "menuList">
+			<ul>
+				<li><button onClick = "triggerAboutList()">About</button></li>
+				<li><button onClick = "triggerPfsList()">Personal Finance Service</button></li>
+				<li><button onClick = "triggerBcbList()">Business & Corporate Banking</button></li>
+				<li><button onClick = "triggerHlcList()">Hong Leong Connect</button></li>
+			</ul>
+		</div>
+		<div id = "aboutList">
+			<ul>
+				<li><button class = "title" href = "#">About</button></li>
+				<li><a href = "storyHLB.html" id = "1">Story of Hong Leong Bank</a></li>
+			</ul>
+		</div>
+		<div id = "pfsList">
+			<ul>
+				<li><button class = "title">Personal Finance Service</button></li>
+				<li><a href = "creditCards.html" id = "2">Credit Cards</a></li>
+				<li><a href = "debitCards.html" id = "3">Debit Cards</a></li>
+				<li><a href = "fixedDeposits.html" id = "4">Fixed Deposits</a></li>
+				<li><a href = "deposits.html" id = "5">Deposits</a></li>
+				<li><a href = "bancassurance.html" id = "6">Bancassurance</a></li>
+				<li><a href = "loans.html" id = "7">Loans</a></li>
+				<li><a href = "priorityBanking.html" id = "8">Priority Banking</a></li>
+				<li><a href = "investments.html" id = "9">Investments</a></li>
+			</ul>
+		</div>
+		<div id = "bcbList">
+			<ul>
+				<li><button class = "title">Business & Corporate Banking</button></li>
+				<li><a href = "businessCorporateLoans.html" id = "10">Business & Corporate Loans</a></li>
+				<li><a href = "businessDeposits.html" id = "11">Business Deposits</a></li>
+				<li><a href = "tradeServices.html" id = "12">Trade Services</a></li>
+				<li><a href = "cashManagement.html" id = "13">Cash Management</a></li>
+				<li><a href = "hlbSme.html" id = "14">HLB SME</a></li>
+			</ul>
+		</div>
+		<div id = "hlcList">
+			<ul>
+				<li><button class = "title" href = "#">Hong Leong Connect</button></li>
+				<li><a href = "onlineBanking.html" id = "15">Online Banking</a></li>
+				<li><a href = "mobileBanking.html" id = "16">Mobile Banking</a></li>
+				<li><a href = "pex.html" id = "17">PEx Payment Express</a></li>
+				<li><a href = "hleBroking.html" id = "18">HLe Broking</a></li>
+			</ul>
+		</div>
+		<div>
+			<button id = "exploreBtn" onClick = "changeBtnToClose()"><img src = "HLB-Interactive/images/icon/icon_plus.png" /><span id = "explore">EXPLORE</span></button>
+			<button id = "closeBtn" onClick = "changeBtnToExplore()"><img src = "HLB-Interactive/images/icon/icon_close.png" /><span id = "close">CLOSE</span></button>
+			<button id = "backBtn" onClick = "changeBtnToClose()"><img src = "HLB-Interactive/images/icon/icon_arrow_right.png" /><span id = "back">BACK</span></button>
+		</div>
+		<script>
+			triggerPfsList();
+			hongLeongBasicSavingsAccountTab();
+			highlightDeposits();
+		</script>
+	</body>
+</html>

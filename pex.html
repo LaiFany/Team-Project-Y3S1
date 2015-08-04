@@ -1,0 +1,125 @@
+<html !DOCTYPE>
+	<head>
+		<link rel = "stylesheet" type = "text/css" href = "CSS/style.css"> 
+		<script src="Javascript/changeBtn.js"></script>
+	</head>
+	<body>
+		<style>
+			body{
+				background : url(HLB-Interactive/images/bg/bg10.jpg) no-repeat center center fixed;
+				background-size : cover;
+			}
+		</style>
+		<div id = "hlbLogo">
+			<img src = "HLB-Interactive/images/bg/hlb_logo.gif">
+		</div>
+		<div id = "sideImage">
+			<img src = "HLB-Interactive/images/content/connect/side/pex.jpg">
+		</div>
+		<div id = "pexHtml">
+			<div class = "container" id = "pex">
+				<h1>Mobile Banking</h1>
+				<div class = "mainScrollBox" id = "pexMainScrollBox">
+					PEx is a revolutionary new mobile-to-mobile money transfer system. Short for Payment Express, PEx provides a fast and convenient way for you to send money from your smartphone to any Malaysian mobile phone number. Put simply, you don't need someone's bank account number to send them money. Now all you need is their mobile number.
+				</div>
+				<div class = "subTab" id = "pexSubTab">
+					<ul>
+						<li><button id = "pexHowPexWorksBtn" onClick = "pexHowPexWorksSubTab()">How PEx Works</button></li>
+						<li><button id = "pexWhyPexBtn" onClick = "pexWhyPexSubTab()">Why PEx</button></li>
+						<li><button id = "pexClaimYourPexBtn" onClick = "pexClaimYourPexSubTab()">Claim Your PEx</button></li>
+					</ul>
+				</div>
+				<div class = "scrollBox" id = "pexHowPexWorksScrollBox">
+					<p><strong>How it works.</strong></p>
+
+					<p>Within the Hong Leong Connect Mobile Banking app, simply enter the phone number you want to send money to or select from your Contacts, the amount up to RM1000 per day, and send it. Every PEx transaction will be given a collection code that you can send via SMS to the payee.</p>
+
+					<p>The payee will receive an sms notice about the PEx payment, and then will go to www.hongleongconnect.my to claim the money. They will need to enter their phone number, PEx amount, collection code, and the designated bank account they want the funds transferred to. It can be any current or savings account from a network of over 12 participating banks in Malaysia.</p>
+				</div>
+				<div class = "scrollBox" id = "pexWhyPexScrollBox">
+					<p><strong>Why you want to have PEx.</strong></p>
+
+					<p>5 REASONS WHY YOU NEED PEx</p>
+					<ol>
+					<li>You are out with your friends for lunch or drinks and it&rsquo;s time to split the bill. You and your friend can just PEx each other. Easy Peasy!</li>
+					<li>Out on the first date but don&rsquo;t feel like having either party to foot the bill? Surprise them by PEx-ing the money to his/her mobile number and they can make a PEx payment collection, then withdraw it at the nearest ATM.</li>
+					<li>Be a life savior! Your little brother or sister is stuck in college and has no money for lunch and the taxi fare home. Just PEx the money to their mobile phone and they can make a PEx payment collection, then withdraw it at the nearest ATM.</li>
+					<li>Mobile numbers are easier to remember and normally stored in your phone contacts. Transfer money to a mobile number is much easier than to an account number.</li>
+					<li>Send pocket monies to your wife and children each month by just transferring cash to their mobile number via PEx.</li>
+					</ol>
+
+					<p>Check out how to perform and claim your PEx here.</p>
+				</div>
+				<div class = "scrollBox" id = "pexClaimYourPexScrollBox">
+					<p><strong>How do I collect my PEx payment?</strong></p>
+
+					<p>You can collect your PEx payment by visiting www.hongleongconnect.com.my and selecting the "PEx Payment Collection - Claim here" button.</p>
+
+					<p>You will be required to enter:</p>
+
+					<p>1. The Collection Code (from sender)<br />
+					2. Your Mobile Number (in receiving PEx payment notification)<br />
+					3. The Payment Amount</p>
+
+					<p>Subsequently, you need to enter an account number to receive the payment. The account number must be a current or savings account from a network of over 12 participating banks.</p>
+				</div>
+			</div>
+		</div>
+		<div id = "menuList">
+			<ul>
+				<li><button onClick = "triggerAboutList()">About</button></li>
+				<li><button onClick = "triggerPfsList()">Personal Finance Service</button></li>
+				<li><button onClick = "triggerBcbList()">Business & Corporate Banking</button></li>
+				<li><button onClick = "triggerHlcList()">Hong Leong Connect</button></li>
+			</ul>
+		</div>
+		<div id = "aboutList">
+			<ul>
+				<li><button class = "title" href = "#">About</button></li>
+				<li><a href = "storyHLB.html" id = "1">Story of Hong Leong Bank</a></li>
+			</ul>
+		</div>
+		<div id = "pfsList">
+			<ul>
+				<li><button class = "title">Personal Finance Service</button></li>
+				<li><a href = "creditCards.html" id = "2">Credit Cards</a></li>
+				<li><a href = "debitCards.html" id = "3">Debit Cards</a></li>
+				<li><a href = "fixedDeposits.html" id = "4">Fixed Deposits</a></li>
+				<li><a href = "deposits.html" id = "5">Deposits</a></li>
+				<li><a href = "bancassurance.html" id = "6">Bancassurance</a></li>
+				<li><a href = "loans.html" id = "7">Loans</a></li>
+				<li><a href = "priorityBanking.html" id = "8">Priority Banking</a></li>
+				<li><a href = "investments.html" id = "9">Investments</a></li>
+			</ul>
+		</div>
+		<div id = "bcbList">
+			<ul>
+				<li><button class = "title">Business & Corporate Banking</button></li>
+				<li><a href = "businessCorporateLoans.html" id = "10">Business & Corporate Loans</a></li>
+				<li><a href = "businessDeposits.html" id = "11">Business Deposits</a></li>
+				<li><a href = "tradeServices.html" id = "12">Trade Services</a></li>
+				<li><a href = "cashManagement.html" id = "13">Cash Management</a></li>
+				<li><a href = "hlbSme.html" id = "14">HLB SME</a></li>
+			</ul>
+		</div>
+		<div id = "hlcList">
+			<ul>
+				<li><button class = "title" href = "#">Hong Leong Connect</button></li>
+				<li><a href = "onlineBanking.html" id = "15">Online Banking</a></li>
+				<li><a href = "mobileBanking.html" id = "16">Mobile Banking</a></li>
+				<li><a href = "pex.html" id = "17">PEx Payment Express</a></li>
+				<li><a href = "hleBroking.html" id = "18">HLe Broking</a></li>
+			</ul>
+		</div>
+		<div>
+			<button id = "exploreBtn" onClick = "changeBtnToClose()"><img src = "HLB-Interactive/images/icon/icon_plus.png" /><span id = "explore">EXPLORE</span></button>
+			<button id = "closeBtn" onClick = "changeBtnToExplore()"><img src = "HLB-Interactive/images/icon/icon_close.png" /><span id = "close">CLOSE</span></button>
+			<button id = "backBtn" onClick = "changeBtnToClose()"><img src = "HLB-Interactive/images/icon/icon_arrow_right.png" /><span id = "back">BACK</span></button>
+		</div>
+		<script>
+			triggerHlcList();
+			pexHowPexWorksSubTab();
+			highlightPex();
+		</script>
+	</body>
+</html>

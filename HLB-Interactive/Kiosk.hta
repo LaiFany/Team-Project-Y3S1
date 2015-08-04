@@ -1,0 +1,102 @@
+<html> 
+<head> 
+<hta:APPLICATION ID="InteractiveApp"
+VERSION="1.1"
+BORDER=""
+INNERBORDER="no"
+SCROLL="no" 
+CAPTION="no"
+SCROLLFLAT="no"
+SHOWINTASKBAR="yes"
+    SINGLEINSTANCE="yes"
+    SYSMENU="yes"
+    NAVIGABLE="no"
+    CONTEXTMENU="yes"
+    ICON="images\your_icon.bmp"
+    WINDOWSTATE="minimize"/>
+<script language="javascript">
+	var checkCounter = 0;
+	var ForAppending = 8;
+	var ForWriting = 2;
+	var ForReading = 1;
+	var count = 0;
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+		
+	var path = window.location.href.split('\/');
+	var thisFilename = "C:/HLB-Interactive/" + path[path.length-1];
+
+	//var interval=5 * 60000; // will check every 5 minutes
+	var interval = 360000;
+	function checkVersion(){
+				
+		checkFile();
+		//RunProgram();
+		//CheckAndCopyApp();
+		checkCounter++;
+		SetStatus ("Check counter: " + checkCounter);
+		
+	}
+
+	function checkFile() {	
+		var objShell = new ActiveXObject("WScript.Shell");
+		if (count < 0){
+			try{
+				objShell.run("taskkill.exe /im InteractiveManager.exe");
+			}catch(e){
+
+			}
+			count = 1;
+		}else{
+			try{
+				objShell.Exec("C:/hlb-Interactive/InteractiveManager.exe");
+			}catch(e){}
+			count = -1;
+		}
+
+		
+		var ret = false;
+		SetStatus ("checking " + thisFilename);
+		file = fso.OpenTextFile(thisFilename, ForReading);
+		while (!file.AtEndOfStream) {
+			var line = file.ReadLine();
+			if (line.indexOf("VERSION")!=-1) {
+				var pos = line.indexOf("=\"") + 2;
+				var ver = line.substring(pos, line.length-1);
+				if (InteractiveApp.version != ver) {
+					ret = true;
+					location.reload(true);
+				}
+				//alert(ver);
+				break;
+			}
+		}
+		return ret;
+	}
+
+
+	var timerCheckVersion=setInterval("checkVersion()",interval);
+
+	function RunProgram() {
+		//var e = document.getElementById("note");
+		//e.innerHTML = "HLB Interactive version " + InteractiveApp.version + "<br/> Check counter: " + checkCounter;
+		//document.write("HLB Interactive version: " + InteractiveApp.version);
+		var objShell = new ActiveXObject("WScript.Shell");
+
+		objShell.Exec("C:/HLB-Interactive/HLB Malaysia.exe");
+
+		SetStatus ("Check counter: " + checkCounter);
+		
+	}
+
+	function SetStatus(stat) {
+		var e = document.getElementById("note");
+		e.innerHTML = stat;
+	}
+
+</script> 
+</head> 
+
+<body onload="RunProgram()"> 
+<div id="note"></div>
+</body> 
+</html>
