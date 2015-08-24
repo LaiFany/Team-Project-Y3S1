@@ -1,0 +1,128 @@
+<content style="html" background="images/bg/bg08.jpg">
+<page title="Mobile Banking" image="images/content/connect/side/mobile_banking.jpg">
+<description>
+<![CDATA[
+Hong Leong Connect Mobile Banking App allows you to access your banking accounts on-the-move, to perform instant fund transfer via your mobile phone and to locate Hong Leong Bank's points of services, whenever and wherever. Download the App today from your iPhone, BlackBerry and Android smart phone.
+]]>
+</description>
+
+<!--
+<tab title="2-In-1 Registration"><![CDATA[
+
+Complicated table
+http://www.hongleongconnect.my/?p=mobile-banking
+
+]]>
+
+</tab>
+//-->
+<tab title="Features"><![CDATA[
+<p><strong>Account Inquiry</strong></p>
+
+<ul>
+<li>Check your account balances and transaction history on-the-move, whether you are stuck in a jam or commuting on the train.</li>
+</ul>
+
+<p><strong>PEx - Payment Express</strong></p>
+
+<ul>
+<li>The simplest and quickest mobile-to-mobile payment service! PEx enables you to pay from your Hong Leong Current or Savings Account to any local mobile number on your smart phone contacts address book or to anyone with a local mobile number.</li>
+</ul>
+
+<p><strong>Locate &amp; Link-Up</strong></p>
+
+<ul>
+<li>Our interactive branch locator is now made available on your mobile phone! Find the nearest Hong Leong ATM, Branch, eBanking Centre, Bureau de Change, Business Centre, Cash Deposit Machine, Cheque Deposit Machine, HLebroking, Priority Banking, and Trade Services. You'll also able to locate Hong Leong Promotions and merchant tie ups around you.</li>
+</ul>
+
+]]>
+</tab>
+
+<tab title="Security"><![CDATA[
+<p><strong>Hong Leong Connect Mobile Banking is secure &amp; safe.</strong><br />
+</p>
+<ul>
+  <li>Your Mobile Banking PIN is tied to your smart phone. So a 3rd party will not be able to login to your account from another smart phone<br>
+    <br>
+  </li>
+  <li>You are required to deactivate your Hong Leong Connect Mobile Banking under the following scenario, before you can proceed with new Mobile Banking registration:</li>
+</ul>
+<ul>
+  <ol>
+    <li>When your mobile phone is lost/stolen</li>
+    <li>When you change your mobile phone</li>
+    &nbsp; &nbsp; &nbsp;<li>When you cancel your Hong Leong Connect Online Banking account and re-register again</li>
+    </li>
+  </ol>
+  <li>2 options to deactivate/cancel your Mobile Banking:<br>
+    <br>
+    <ul>
+      <li> Login to Hong Leong Connect Online Banking and email us via Compose Message in the Message menu, select Deactivate/Cancel Mobile Banking in the Enquiry Category.<br>
+        <br>
+        OR<br>
+        <br>
+      </li>
+      <li>Call our Customer Service at 03-7626 889</li>
+    </ul>
+  </li>
+</ul>
+]]>
+</tab>
+
+<tab title="Get Started"><![CDATA[
+<p><strong>Get started with the following checklist:</strong></p>
+
+<ul>
+<li>An active Hong Leong ATM / Debit Card / Credit Card</li>
+<li>A Smart Phone of any of the below specifications :</li>
+</ul>
+<table cellpadding="4" width="100%">
+    <tbody><tr>
+      <th style="width:35%;"><div align="left">Manufacturer</div></th>
+      <th>Model</th>
+    </tr>
+    <tr class="table_row">
+      <td colspan="2"><span class="style4">Apple IOS version 4.x and beyond</span></td>
+    </tr>
+    <tr>
+      <td><span class="style1">Apple</span></td>
+      <td><span class="style1">iPhone 3GS / iPhone 4 / iPhone 4S / iPhone 5 </span></td>
+    </tr>
+    <tr class="table_row">
+      <td colspan="2"><span class="style4">Android OS version 2.x and beyond </span></td>
+    </tr>
+    <tr>
+      <td><span class="style1">Samsung</span></td>
+      <td><span class="style1">Galaxy S / SII / SIII, Note I / II Nexus </span></td>
+    </tr>
+    <tr class="table_row">
+      <td><span class="style1">HTC</span></td>
+      <td><span class="style1">Desire / Hero / Legend / Incredible </span></td>
+    </tr>
+    <tr>
+      <td colspan="2"><span class="style4">Blackberry OS version 5.0 and beyond </span></td>
+    </tr>
+    <tr class="table_row">
+      <td><span class="style1">BlackBerry</span></td>
+      <td><span class="style1">Curve / Bold / Pearl / Storm / Torch </span></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+<li>Internet PIN - You can obtain the Internet PIN from any Hong Leong Bank's ATM . This is required for first time registration of your Hong Leong Connect Mobile Banking App.</li>
+
+<li>Where to download Hong Leong Connect Mobile Banking App ?</li>
+</ul>
+
+<div>&nbsp; &nbsp; &nbsp; 1.  App Store - Apple iPhone</div>
+<div>&nbsp; &nbsp; &nbsp; 2.  App World - BlackBerry</div>
+<div>&nbsp; &nbsp; &nbsp; 3.  Market / Google Play / Play Store - Android</div>
+
+
+<div>&nbsp; &nbsp; &nbsp; Click here for our Interactive Tutorial</div>
+]]>
+</tab>
+
+</page>
+</content>

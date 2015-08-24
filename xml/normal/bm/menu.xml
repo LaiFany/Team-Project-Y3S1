@@ -1,0 +1,75 @@
+<menu states="EKSPLOR" states1="TUTUP" states2="BALIK" states3="BAHASA">
+  
+	<menu label="Mengenai">
+    
+		<menu label="Kisah Hong Leong Bank" data="storyHLB.php" type="html"/>
+  
+	</menu>
+  
+  
+	<menu label="Perkhidmatan Kewangan Peribadi">
+    
+		<menu label="Kad Kredit" data="creditCards.php" type="slide"/>
+    
+		<menu label="Kad debit" data="debitCards.php" type="html"/>
+    
+		<menu label="Deposit tetap" data="fixedDeposits.php" type="html"/>
+    
+		<menu label="Deposit" data="deposits.php" type="html"/>
+    
+		<menu label="Bancassurance" data="bancassurance.php" type="html"/>
+    
+		<menu label="Pinjaman" data="loans.php" type="html"/>
+    
+		<menu label="Perbankan Prioriti" data="priorityBanking.php" type="html"/>
+    
+		<menu label="Pelaburan" data="investments.php" type="html"/>
+  
+	</menu>
+
+  
+	<menu label="Perniagaan &amp; Perbankan Korporat">
+    
+		<menu label="Perniagaan &amp; Pinjaman Korporat" data="businessCorporateLoans.php" type="html"/>
+    
+		<menu label="Deposit Perniagaan" data="businessDeposits.php" type="html"/>
+    
+		<menu label="Perkhidmatan Perdagangan" data="tradeServices.php" type="html"/>
+    
+		<menu label="Pengurusan Tunai" data="cashManagement.php" type="html"/>
+    
+		<menu label="HLB SME" data="hlbSme.php" type="html"/>
+  
+	</menu>
+
+  
+	<menu label="Hong Leong Connect">
+    
+		<menu label="Perbankan Dalam Talian" data="onlineBanking.php" type="html"/>
+    
+		<menu label="Perbankan Mudah Alih" data="mobileBanking.php" type="html"/>
+    
+		<menu label="PEx Pembayaran Ekspres" data="pex.php" type="html"/>
+   
+		<menu label="HLe Broker" data="hleBroking.php" type="html"/>
+  
+	</menu>
+	
+	<menu label = "Versi">
+		
+		<menu label = "Normal" data = "index.php" type = "html"/>
+		
+		<menu label = "Islamic" data = "islamIndex.php" type = "html"/>
+		
+	</menu>
+	
+	<menu label = "Bahasa">
+	
+		<menu label = "Inggeris" data = "#" type = "html"/>
+		
+		<menu label = "Bahasa Malaysia" data = "#" type = "html"/>
+	
+	</menu>
+
+</menu>
+

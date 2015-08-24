@@ -1,3 +1,70 @@
+//scripts for version and language
+
+//change color of list 
+/*function changeNormalColor(){
+	document.getElementById("normal").style.backgroundColor = "#000055";
+	document.getElementById("islamic").style.backgroundColor = "red";
+}
+function changeIslamicColor(){
+	document.getElementById("normal").style.backgroundColor = "red";
+	document.getElementById("islamic").style.backgroundColor = "#000055";
+}*/
+function changeBmColor(){
+	document.getElementById("bm").style.backgroundColor = "#000055";
+	document.getElementById("eng").style.backgroundColor = "red";
+}
+function changeEngColor(){
+	document.getElementById("bm").style.backgroundColor = "red";
+	document.getElementById("eng").style.backgroundColor = "#000055";
+}
+
+/*ajax for language*/
+//toggle language
+function changeLangToBM(){
+	var lang = "bm";
+	var xmlhttp;
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        // Reload the page
+        window.location.reload();
+        }
+      }
+    xmlhttp.open("POST","set_session.php?lang=" + lang,true);
+    xmlhttp.send();
+}
+function changeLangToEng(){
+	var lang = "eng";
+	var xmlhttp;
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        // Reload the page
+        window.location.reload();
+        }
+      }
+    xmlhttp.open("POST","set_session.php?lang=" + lang,true);
+    xmlhttp.send();
+}
+
 /*scripts for menu button*/
 function changeBtnToClose(){
 	document.getElementById("exploreBtn").style.visibility = "hidden";
@@ -8,6 +75,7 @@ function changeBtnToClose(){
 	document.getElementById("pfsList").style.visibility = "hidden";
 	document.getElementById("bcbList").style.visibility = "hidden";
 	document.getElementById("hlcList").style.visibility = "hidden";
+	document.getElementById("langList").style.visibility = "hidden";
 	
 	document.getElementById("menuList").style.opacity = "1";
 	document.getElementById("menuList").style.transition = "opacity 1s linear";
@@ -15,15 +83,45 @@ function changeBtnToClose(){
 	document.getElementById("pfsList").style.opacity = "0";
 	document.getElementById("bcbList").style.opacity = "0";
 	document.getElementById("hlcList").style.opacity = "0";
+	document.getElementById("langList").style.opacity = "0";
 }
 
 function changeBtnToExplore(){
 	document.getElementById("closeBtn").style.visibility = "hidden";
 	document.getElementById("exploreBtn").style.visibility = "visible";
 	document.getElementById("menuList").style.visibility = "hidden";
-	location.href = "index.html";
+	if(verSession == "normal")
+		location.href = "index.php";
+	else if(verSession == "islamic")
+		location.href = "islamIndex.php";
 	
 	document.getElementById("menuList").style.opacity = "0";
+}
+
+function changeBtnToCloseLang(){
+	document.getElementById("closeBtn").style.visibility = "hidden";
+	document.getElementById("backBtn").style.visibility = "hidden";
+	document.getElementById("menuList").style.visibility = "hidden";
+	document.getElementById("langList").style.visibility = "visible";
+	document.getElementById("exploreBtn").style.visibility = "hidden";
+	document.getElementById("closeLang").style.visibility = "visible";
+	document.getElementById("langList").style.opacity = "1";
+	document.getElementById("langList").style.transition = "opacity 1s linear";
+	
+	document.getElementById("menuList").style.opacity = "0";
+	document.getElementById("aboutList").style.opacity = "0";
+	document.getElementById("pfsList").style.opacity = "0";
+	document.getElementById("bcbList").style.opacity = "0";
+	document.getElementById("hlcList").style.opacity = "0";
+	
+}
+
+function changeBtnToLang(){
+	document.getElementById("closeLang").style.visibility = "hidden";
+	document.getElementById("lang").style.visibility = "visible";
+	document.getElementById("langList").style.visibility = "hidden";
+	document.getElementById("exploreBtn").style.visibility = "visible";
+	document.getElementById("langList").style.opacity = "0";
 }
 
 /*scripts for menu list*/
@@ -41,6 +139,8 @@ function triggerAboutList(){
 	document.getElementById("pfsList").style.opacity = "0";
 	document.getElementById("bcbList").style.opacity = "0";
 	document.getElementById("hlcList").style.opacity = "0";
+
+	document.getElementById("langList").style.opacity = "0";
 }
 
 function triggerPfsList(){
@@ -57,6 +157,8 @@ function triggerPfsList(){
 	document.getElementById("aboutList").style.opacity = "0";
 	document.getElementById("bcbList").style.opacity = "0";
 	document.getElementById("hlcList").style.opacity = "0";
+	
+	document.getElementById("langList").style.opacity = "0";
 }
 
 function triggerBcbList(){
@@ -73,6 +175,8 @@ function triggerBcbList(){
 	document.getElementById("aboutList").style.opacity = "0";
 	document.getElementById("pfsList").style.opacity = "0";
 	document.getElementById("hlcList").style.opacity = "0";
+	
+	document.getElementById("langList").style.opacity = "0";
 }
 
 function triggerHlcList(){
@@ -89,9 +193,11 @@ function triggerHlcList(){
 	document.getElementById("aboutList").style.opacity = "0";
 	document.getElementById("pfsList").style.opacity = "0";
 	document.getElementById("bcbList").style.opacity = "0";
+	
+	document.getElementById("langList").style.opacity = "0";
 }
 
-/**/
+/*general*/
 function highlightStory(){
 	document.getElementById("1").style.backgroundColor = "#000055";
 	document.getElementById("2").style.backgroundColor = "red";
@@ -632,6 +738,37 @@ function changeBancassurancePopularProductsBtnColor(){
 	document.getElementById("bancassurancePopularProductsBtn").style.color = "white";
 }
 
+/*scripts for priorityBanking.html*/
+/*hide and show subtabs*/
+function priorityBankingIntroductionSubTab(){
+	document.getElementById("priorityBankingIntroductionScrollBox").style.visibility = "visible";
+	document.getElementById("priorityBankingPrivilegeScrollBox").style.visibility = "hidden";
+	
+	changePriorityBankingIntroductionBtnColor();
+}
+
+function priorityBankingPrivilegeSubTab(){
+	document.getElementById("priorityBankingIntroductionScrollBox").style.visibility = "hidden";
+	document.getElementById("priorityBankingPrivilegeScrollBox").style.visibility = "visible";
+	
+	changePriorityBankingPrivilegeBtnColor();
+}
+
+/*change color of subtab*/
+function changePriorityBankingIntroductionBtnColor(){
+	document.getElementById("priorityBankingIntroductionBtn").style.backgroundColor = "red";
+	document.getElementById("priorityBankingPrivilegeBtn").style.backgroundColor = "white";
+	document.getElementById("priorityBankingIntroductionBtn").style.color = "white";
+	document.getElementById("priorityBankingPrivilegeBtn").style.color = "black";
+}
+
+function changePriorityBankingPrivilegeBtnColor(){
+	document.getElementById("priorityBankingIntroductionBtn").style.backgroundColor = "white";
+	document.getElementById("priorityBankingPrivilegeBtn").style.backgroundColor = "red";
+	document.getElementById("priorityBankingIntroductionBtn").style.color = "black";
+	document.getElementById("priorityBankingPrivilegeBtn").style.color = "white";
+}
+
 /*scripts for fixedDeposits.html*/
 /*hide and show tabs*/
 function hongLeongFlexiFDTab(){
@@ -644,6 +781,8 @@ function hongLeongFlexiFDTab(){
 	document.getElementById("hongLeongSeniorSaversFlexiFDFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongSeniorSaversFlexiFDEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongSeniorSaversFlexiFDFeesScrollBox").style.visibility = "hidden";
+	flexiFDFeaturesSubTab();
+	changeFlexiFDFeaturesSubTabColor();
 	
 	document.getElementById("flexiFDImg").style.visibility = "visible";
 	document.getElementById("juniorFDImg").style.visibility = "hidden";
@@ -653,6 +792,9 @@ function hongLeongFlexiFDTab(){
 function hongLeongJuniorFDTab(){
 	document.getElementById("hongLeongFlexiFD").style.visibility = "hidden";
 	document.getElementById("hongLeongJuniorFD").style.visibility = "visible";
+	document.getElementById("hongLeongFlexiFDFeaturesScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDEligibilityScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDFeesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongSeniorSaversFlexiFD").style.visibility = "hidden";
 	document.getElementById("hongLeongSeniorSaversFlexiFDFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongSeniorSaversFlexiFDEligibilityScrollBox").style.visibility = "hidden";
@@ -668,6 +810,9 @@ function hongLeongJuniorFDTab(){
 function hongLeongSeniorSaversFlexiFDTab(){
 	document.getElementById("hongLeongFlexiFD").style.visibility = "hidden";
 	document.getElementById("hongLeongJuniorFD").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDFeaturesScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDEligibilityScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDFeesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongSeniorSaversFlexiFD").style.visibility = "visible";
 	document.getElementById("hongLeongJuniorFDFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongJuniorFDEligibilityScrollBox").style.visibility = "hidden";
@@ -697,6 +842,52 @@ function changeHongLeongSeniorSaversFlexiFDBtnColor(){
 	document.getElementById("hongLeongFlexiFDBtn").style.backgroundColor = "#000055";
 	document.getElementById("hongLeongJuniorFDBtn").style.backgroundColor = "#000055";
 	document.getElementById("hongLeongSeniorSaversFlexiFDBtn").style.backgroundColor = "red";
+}
+
+/*script for flexi FD sub tabs*/
+function flexiFDFeaturesSubTab(){
+	document.getElementById("hongLeongFlexiFDFeaturesScrollBox").style.visibility = "visible";
+	document.getElementById("hongLeongFlexiFDEligibilityScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDFeesScrollBox").style.visibility = "hidden";
+}
+
+function flexiFDEligibilitySubTab(){
+	document.getElementById("hongLeongFlexiFDFeaturesScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDEligibilityScrollBox").style.visibility = "visible";
+	document.getElementById("hongLeongFlexiFDFeesScrollBox").style.visibility = "hidden";
+}
+
+function flexiFDFeesSubTab(){
+	document.getElementById("hongLeongFlexiFDFeaturesScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDEligibilityScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongFlexiFDFeesScrollBox").style.visibility = "visible";
+}
+/*change color of button*/
+function changeFlexiFDFeaturesSubTabColor(){
+	document.getElementById("flexiFDFeaturesBtn").style.backgroundColor = "red";
+	document.getElementById("flexiFDEligibilityBtn").style.backgroundColor = "white";
+	document.getElementById("flexiFDFeesBtn").style.backgroundColor = "white";
+	document.getElementById("flexiFDFeaturesBtn").style.color = "white";
+	document.getElementById("flexiFDEligibilityBtn").style.color = "black";
+	document.getElementById("flexiFDFeesBtn").style.color = "black";
+}
+
+function changeFlexiFDEligibilitySubTabColor(){
+	document.getElementById("flexiFDFeaturesBtn").style.backgroundColor = "white";
+	document.getElementById("flexiFDEligibilityBtn").style.backgroundColor = "red";
+	document.getElementById("flexiFDFeesBtn").style.backgroundColor = "white";
+	document.getElementById("flexiFDFeaturesBtn").style.color = "black";
+	document.getElementById("flexiFDEligibilityBtn").style.color = "white";
+	document.getElementById("flexiFDFeesBtn").style.color = "black";
+}
+
+function changeFlexiFDFeesSubTabColor(){
+	document.getElementById("flexiFDFeaturesBtn").style.backgroundColor = "white";
+	document.getElementById("flexiFDEligibilityBtn").style.backgroundColor = "white";
+	document.getElementById("flexiFDFeesBtn").style.backgroundColor = "red";
+	document.getElementById("flexiFDFeaturesBtn").style.color = "black";
+	document.getElementById("flexiFDEligibilityBtn").style.color = "black";
+	document.getElementById("flexiFDFeesBtn").style.color = "white";
 }
 
 /*script for junior FD sub tabs*/
@@ -1071,7 +1262,7 @@ function hongLeongBasicSavingsAccountTab(){
 	document.getElementById("hongLeongPayAndSaveAccountEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongPayAndSaveAccountFeesScrollBox").style.visibility = "hidden";
 	
-	basicSavingsAccountFeaturesSubTab();
+	basicSavingsAccountMainSubTab();
 	changeHongLeongBasicSavingsAccountBtnColor();
 	
 	document.getElementById("basicSavingsAccImg").style.visibility = "visible";
@@ -1086,6 +1277,7 @@ function hongLeongBasicCurrentAccountTab(){
 	document.getElementById("hongLeongOneAccount").style.visibility = "hidden";
 	document.getElementById("hongLeongPayAndSaveAccount").style.visibility = "hidden";
 	
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "hidden";
@@ -1113,6 +1305,7 @@ function hongLeongOneAccountTab(){
 	document.getElementById("hongLeongOneAccount").style.visibility = "visible";
 	document.getElementById("hongLeongPayAndSaveAccount").style.visibility = "hidden";
 	
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "hidden";
@@ -1140,6 +1333,7 @@ function hongLeongPayAndSaveAccountTab(){
 	document.getElementById("hongLeongOneAccount").style.visibility = "hidden";
 	document.getElementById("hongLeongPayAndSaveAccount").style.visibility = "visible";
 	
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "hidden";
@@ -1191,7 +1385,17 @@ function changeHongLeongPayAndSaveAccountBtnColor(){
 }
 /*Basic Savings Account */
 /*hide and show sub tab*/
+function basicSavingsAccountMainSubTab(){
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "visible";
+	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "hidden";
+	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "hidden";
+	
+	changeBasicSavingsAccountMainSubTabColor();
+}
+
 function basicSavingsAccountFeaturesSubTab(){
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "visible";
 	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "hidden";
@@ -1200,6 +1404,7 @@ function basicSavingsAccountFeaturesSubTab(){
 }
 
 function basicSavingsAccountEligibilitySubTab(){
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "visible";
 	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "hidden";
@@ -1208,6 +1413,7 @@ function basicSavingsAccountEligibilitySubTab(){
 }
 
 function basicSavingsAccountFeesSubTab(){
+	document.getElementById("hongLeongBasicSavingsAccountMainScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeaturesScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountEligibilityScrollBox").style.visibility = "hidden";
 	document.getElementById("hongLeongBasicSavingsAccountFeesScrollBox").style.visibility = "visible";
@@ -1216,28 +1422,45 @@ function basicSavingsAccountFeesSubTab(){
 }
 
 /*change color of subtab*/
+function changeBasicSavingsAccountMainSubTabColor(){
+	document.getElementById("basicSavingsAccountMainBtn").style.backgroundColor = "red";
+	document.getElementById("basicSavingsAccountFeaturesBtn").style.backgroundColor = "white";
+	document.getElementById("basicSavingsAccountEligibilityBtn").style.backgroundColor = "white";
+	document.getElementById("basicSavingsAccountFeesBtn").style.backgroundColor = "white";
+	document.getElementById("basicSavingsAccountMainBtn").style.color = "white";
+	document.getElementById("basicSavingsAccountFeaturesBtn").style.color = "black";
+	document.getElementById("basicSavingsAccountEligibilityBtn").style.color = "black";
+	document.getElementById("basicSavingsAccountFeesBtn").style.color = "black";
+}
+
 function changeBasicSavingsAccountFeaturesSubTabColor(){
+	document.getElementById("basicSavingsAccountMainBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountFeaturesBtn").style.backgroundColor = "red";
 	document.getElementById("basicSavingsAccountEligibilityBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountFeesBtn").style.backgroundColor = "white";
+	document.getElementById("basicSavingsAccountMainBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountFeaturesBtn").style.color = "white";
 	document.getElementById("basicSavingsAccountEligibilityBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountFeesBtn").style.color = "black";
 }
 
 function changeBasicSavingsAccountEligibilitySubTabColor(){
+	document.getElementById("basicSavingsAccountMainBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountFeaturesBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountEligibilityBtn").style.backgroundColor = "red";
 	document.getElementById("basicSavingsAccountFeesBtn").style.backgroundColor = "white";
+	document.getElementById("basicSavingsAccountMainBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountFeaturesBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountEligibilityBtn").style.color = "white";
 	document.getElementById("basicSavingsAccountFeesBtn").style.color = "black";
 }
 
 function changeBasicSavingsAccountFeesSubTabColor(){
+	document.getElementById("basicSavingsAccountMainBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountFeaturesBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountEligibilityBtn").style.backgroundColor = "white";
 	document.getElementById("basicSavingsAccountFeesBtn").style.backgroundColor = "red";
+	document.getElementById("basicSavingsAccountMainBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountFeaturesBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountEligibilityBtn").style.color = "black";
 	document.getElementById("basicSavingsAccountFeesBtn").style.color = "white";
@@ -1493,6 +1716,37 @@ function changePayAndSaveAccountFeesSubTabColor(){
 }
 
 /*BCB*/
+/*scripts for hlbSme.html*/
+/*hide and show subtabs*/
+function hlbSmeTipsSubTab(){
+	document.getElementById("tipsScrollBox").style.visibility = "visible";
+	document.getElementById("contactDetailsScrollBox").style.visibility = "hidden";
+	
+	changeHlbSmeTipsBtnColor();
+}
+
+function hlbSmeContactDetailsSubTab(){
+	document.getElementById("tipsScrollBox").style.visibility = "hidden";
+	document.getElementById("contactDetailsScrollBox").style.visibility = "visible";
+	
+	changeHlbSmeContactDetailsBtnColor();
+}
+
+/*change color of subtab*/
+function changeHlbSmeTipsBtnColor(){
+	document.getElementById("hlbSmeTipsBtn").style.backgroundColor = "red";
+	document.getElementById("hlbSmeContactDetailsBtn").style.backgroundColor = "white";
+	document.getElementById("hlbSmeTipsBtn").style.color = "white";
+	document.getElementById("hlbSmeContactDetailsBtn").style.color = "black";
+}
+
+function changeHlbSmeContactDetailsBtnColor(){
+	document.getElementById("hlbSmeTipsBtn").style.backgroundColor = "white";
+	document.getElementById("hlbSmeContactDetailsBtn").style.backgroundColor = "red";
+	document.getElementById("hlbSmeTipsBtn").style.color = "black";
+	document.getElementById("hlbSmeContactDetailsBtn").style.color = "white";
+}
+
 /*scripts for businessDeposits.html*/
 /*hide and show tabs*/
 function hongLeongPowerSMECurrentAccountTab(){
@@ -1660,7 +1914,7 @@ function changeMainSubTabColor(){
 	document.getElementById("mainBtn").style.color = "white";
 	document.getElementById("importsLocalPurchasesBtn").style.color = "black";
 	document.getElementById("exportsLocalSalesBtn").style.color = "black";
-	document.getElementById("ServicesBtn").style.color = "black";
+	document.getElementById("servicesBtn").style.color = "black";
 }
 
 function changeImportsLocalPurchasesSubTabColor(){
@@ -1671,7 +1925,7 @@ function changeImportsLocalPurchasesSubTabColor(){
 	document.getElementById("mainBtn").style.color = "black";
 	document.getElementById("importsLocalPurchasesBtn").style.color = "white";
 	document.getElementById("exportsLocalSalesBtn").style.color = "black";
-	document.getElementById("ServicesBtn").style.color = "black";
+	document.getElementById("servicesBtn").style.color = "black";
 }
 
 function changeExportsLocalSalesSubTabColor(){
@@ -1682,7 +1936,7 @@ function changeExportsLocalSalesSubTabColor(){
 	document.getElementById("mainBtn").style.color = "black";
 	document.getElementById("importsLocalPurchasesBtn").style.color = "black";
 	document.getElementById("exportsLocalSalesBtn").style.color = "white";
-	document.getElementById("ServicesBtn").style.color = "black";
+	document.getElementById("servicesBtn").style.color = "black";
 }
 
 function changeServicesSubTabColor(){
@@ -1693,7 +1947,7 @@ function changeServicesSubTabColor(){
 	document.getElementById("mainBtn").style.color = "black";
 	document.getElementById("importsLocalPurchasesBtn").style.color = "black";
 	document.getElementById("exportsLocalSalesBtn").style.color = "black";
-	document.getElementById("ServicesBtn").style.color = "white";
+	document.getElementById("servicesBtn").style.color = "white";
 }
 
 /*script for hleBroking.html*/
@@ -2346,7 +2600,7 @@ function changeFundTransferMainSubTabColor(){
 	document.getElementById("fundTransferReceivingBankDetailsBtn").style.backgroundColor = "white";
 	document.getElementById("fundTransferMainBtn").style.color = "white";
 	document.getElementById("fundTransferWhichServiceToUseBtn").style.color = "black";
-	document.getElementById("fundTransferReceivingBankDetailseBtn").style.color = "black";
+	document.getElementById("fundTransferReceivingBankDetailsBtn").style.color = "black";
 }
 
 function changeFundTransferWhichServiceToUseSubTabColor(){
@@ -2355,7 +2609,7 @@ function changeFundTransferWhichServiceToUseSubTabColor(){
 	document.getElementById("fundTransferReceivingBankDetailsBtn").style.backgroundColor = "white";
 	document.getElementById("fundTransferMainBtn").style.color = "black";
 	document.getElementById("fundTransferWhichServiceToUseBtn").style.color = "white";
-	document.getElementById("fundTransferReceivingBankDetailseBtn").style.color = "black";
+	document.getElementById("fundTransferReceivingBankDetailsBtn").style.color = "black";
 }
 
 function changeFundTransferReceivingBankDetailsSubTabColor(){
@@ -2364,7 +2618,7 @@ function changeFundTransferReceivingBankDetailsSubTabColor(){
 	document.getElementById("fundTransferReceivingBankDetailsBtn").style.backgroundColor = "red";
 	document.getElementById("fundTransferMainBtn").style.color = "black";
 	document.getElementById("fundTransferWhichServiceToUseBtn").style.color = "black";
-	document.getElementById("fundTransferReceivingBankDetailseBtn").style.color = "white";
+	document.getElementById("fundTransferReceivingBankDetailsBtn").style.color = "white";
 }
 
 /*script for standing instructions*/

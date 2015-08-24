@@ -416,4 +416,4 @@ $.fn.flipster = function(options) {
         $(".flipster").flipster(
             'jump', 'right'
         );
-    },5000);
+    },7000);

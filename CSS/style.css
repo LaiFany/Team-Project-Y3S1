@@ -3,6 +3,12 @@
     outline-color: #00ff00;*/
 }
 
+.note{
+	font-size : 12;
+	font-weight : bold;
+	font-style : italic;
+}
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -21,18 +27,13 @@ body{
 	scrollbar-shadow-color: #C0C0C0;
 	scrollbar-dark-shadow-color: #C0C0C0;
 	overflow : hidden;
+	-ms-user-select : none;
+	cursor : default;
 }
 
 div#coverflow{
 	position : absolute;
 	top : 15%;
-}
-
-div#coverflow img{
-	height : 100%;
-	width : 100%;
-	max-height : 567px;
-	max-width : 387px;
 }
 
 tr:nth-child(odd){
@@ -46,22 +47,21 @@ th{
 
 a:link {
     text-decoration: none;
-	cursor : default;
+
 }
 
 a:visited {
     text-decoration: none;
-	cursor : default;
+
 }
 
 a:hover {
     text-decoration: none;
-	cursor : default;
+
 }
 
 a:active {
     text-decoration: none;
-	cursor : default;
 }
 
 /*hlb logo*/
@@ -82,19 +82,19 @@ div#sideImage img{
 	left : 0;
 	top : 12.4%;
 	height : 87.6%;
+	width : 13.5%;
 	box-shadow : 0 0 30px 5px black, 0 0 30px 5px black;
 	z-index : -1;
+	animation: fadein 2s;
 }
 
 /**/
 button#exploreBtn, button#closeBtn, button#backBtn{
 	background-color : #000055;
-	font-size : 16;
 	color : white;
-	min-width : 140px;
-	min-height : 50px;
 	width : 13%;
 	height : 8.7%;
+	min-width : 115px;
 	text-align : left;
 	padding : 0;
 	border : 0;
@@ -102,51 +102,70 @@ button#exploreBtn, button#closeBtn, button#backBtn{
 	right : 0;
 	bottom : 12%;
 	box-shadow : 0 0 30px 2px white, 0 0 30px 2px white;
+	font-size : 16;
 }
-#closeBtn, #backBtn{
+
+button#lang, button#closeLang{
+	background-color : #000055;
+	color : white;
+	width : 13%;
+	height : 8.7%;
+	min-width : 115px;
+	text-align : left;
+	padding : 0;
+	border : 0;
+	position : absolute;
+	right : 0;
+	bottom : 3%;
+	box-shadow : 0 0 30px 2px white, 0 0 30px 2px white;
+	font-size : 16;
+}
+#closeBtn, #backBtn, #closeLang{
 	visibility : hidden;
 }
 button img{
 	background-color : red;
 	padding : 3.8 5 3.8 5;
 	height : 90%;
-	min-height : 47px;
-	min-width : 45px;
+	width : 30%;
 }
-#explore, #back, #close{
+#explore, #back, #close, #langText, #closeText{
 	padding-left : 45%;
 	position : relative;
 	bottom : 63%;
 	font-family : Arial, Helvetica, sans-serif;
 }
 
-#menuList{
+#menuList, #aboutList, #pfsList, #bcbList, #hlcList{
 	visibility : hidden;
 	position : absolute;
 	right : 0;
 	bottom : 18.35%;
-	width : 15.6%;
+	width : 15.5%;
+	min-width : 155px;
 	font-family : Arial, Helvetica, sans-serif;
 	opacity:0;
 	transition: visibility 0s 2s, opacity 2s linear;
 }
 
-#aboutList, #pfsList, #bcbList, #hlcList{
+#langList{
 	visibility : hidden;
 	position : absolute;
 	right : 0;
-	bottom : 18.35%;
-	width : 15.6%;
+	bottom : 9.35%;
+	width : 15.5%;
+	min-width : 155px;
 	font-family : Arial, Helvetica, sans-serif;
 	opacity:0;
 	transition: visibility 0s 2s, opacity 2s linear;
 }
 
-#menuList li, #aboutList li, #pfsList li, #bcbList li, #hlcList li, #investmentsNavBar li, #fixedDepositsNavBar li, div#hongLeongJuniorFDSubTab li, div#hongLeongSeniorSaversFlexiFDSubTab li, div#debitCardsNavBar li, div#hongLeongTouchNGoZingDebitCardSubTab li, div#hongLeongDebitCardSubTab li, div#hongLeongJuniorDebitCardSubTab li, div#loansNavBar li, div#hongLeongPowerSMECurrentAccountSubTab li, div#hongLeongBusinessFlexiFDSubTab li, div#businessDepositsNavBar li, div#tradeServicesSubTab li, div#hleBrokingSubTab li, div#mobileBankingSubTab li, div#pexSubTab li, div#hongLeongBasicSavingsAccountSubTab li, div#hongLeongBasicCurrentAccountSubTab li, div#hongLeongOneAccountSubTab li, div#hongLeongPayAndSaveAccountSubTab li, div#depositsNavBar li, div#bancassuranceSubTab li, div#cashManagementSubTab li, div#businessCorporateLoansSubTab li, div#onlineBankingNavBar li, div#onlineBankingSubTab li, div#accountInquiryAndRepaymentsSubTab li, div#billPaymentAndPrepaidReloadSubTab li, div#fundTransferSubTab li, div#standingInstructionSubTab li, div#otherServicesSubTab li{
+.subTab li, .navBar li, #menuList li, #aboutList li, #pfsList li, #bcbList li, #hlcList li, #investmentsNavBar li, #fixedDepositsNavBar li, div#hongLeongJuniorFDSubTab li, div#hongLeongSeniorSaversFlexiFDSubTab li, div#debitCardsNavBar li, div#hongLeongTouchNGoZingDebitCardSubTab li, div#hongLeongDebitCardSubTab li, div#hongLeongJuniorDebitCardSubTab li, div#loansNavBar li, div#hongLeongPowerSMECurrentAccountSubTab li, div#hongLeongBusinessFlexiFDSubTab li, div#businessDepositsNavBar li, div#tradeServicesSubTab li, div#hleBrokingSubTab li, div#mobileBankingSubTab li, div#pexSubTab li, div#hongLeongBasicSavingsAccountSubTab li, div#hongLeongBasicCurrentAccountSubTab li, div#hongLeongOneAccountSubTab li, div#hongLeongPayAndSaveAccountSubTab li, div#depositsNavBar li, div#bancassuranceSubTab li, div#cashManagementSubTab li, div#businessCorporateLoansSubTab li, div#onlineBankingNavBar li, div#onlineBankingSubTab li, div#accountInquiryAndRepaymentsSubTab li, div#billPaymentAndPrepaidReloadSubTab li, div#fundTransferSubTab li, div#standingInstructionSubTab li, div#otherServicesSubTab li, #priorityBankingSubTab li, #hlbSmeSubTab li, #langList li{
 	list-style-type : none;
 }
 
 #menuList button{
+	display : block;
 	position : relative;
 	background-color : red;
 	font-size : 14;
@@ -157,46 +176,41 @@ button img{
 	min-height : 50px;
 	text-align : left;
 	border : 0;
-	box-shadow : 0 0 30px 2px white, 0 0 30px 2px white;
+	text-shadow: 0 0 5px white;
 }
 
-#pfsList a, #bcbList a, #hlcList a, #aboutList a{
+#pfsList a, #bcbList a, #hlcList a, #aboutList a, #verList a, #langList a{
 	display : block;
 	background-color : red;
-	font-size : 13;
+	font-size : 12;
 	color : white;
-	padding : 20 7 20 7;
-	width : 92%;
-	box-shadow : 0 0 30px 2px white, 0 0 30px 2px white;
+	padding : 15 7 15 7;
+	width : 100%;
+	text-shadow: 0 0 5px white;
 }
 
 .title{
 	font-family : Arial, Helvetica, sans-serif;
 	background-color : B22222;
-	font-size : 14;
+	font-size : 16;
 	color : white;
 	width : 105%;
-	height : 9%;
+	height : 10%;
 	min-width : 140px;
-	min-height : 50px;
+	min-height : 60px;
 	text-align : left;
 	border : 0;
 	box-shadow : 0 0 30px 5px black;
 
 }
-/**/
-
-div#investmentsHtml, div#loansHtml, div#tradeServicesHtml, div#hleBrokingHtml, div#mobileBankingHtml, div#pexHtml, div#fixedDepositsHtml, div#debitCardsHtml, div#businessDepositsHtml, div#depositsHtml, div#bancassuranceHtml, div#cashManagementHtml, div#businessCorporateLoansHtml, div#onlineBankingHtml{
-	position : relative;
-}
 
 .container{
 	position : absolute;
 	background-color : white;
-	width : 660px;
-	height : 500px;
-	left : 300;
-	top : 150;
+	width : 60%;
+	height : 73%;
+	left : 20%;
+	top : 20%;
 	box-shadow : 0 0 30px 5px white, 0 0 30px 5px #000055;
 	font-family : Arial, Helvetica, sans-serif;
 	animation: fadein 2s;
@@ -204,20 +218,19 @@ div#investmentsHtml, div#loansHtml, div#tradeServicesHtml, div#hleBrokingHtml, d
 
 .mainScrollBox{
 	background-color : white;
-	width : 600px;
-	height : 80px;
+	width : 90%;
+	height : 15%;
 	overflow-y : auto;
 	overflow-x : hidden;
 	position : relative;
 	padding : 0 0 0 50;
-
 	-ms-overflow-style: none;
 }
 
 .scrollBox{
 	background-color : white;
-	width : 600px;
-	height : 250px;
+	width : 90%;
+	height : 55%;
 	overflow-y : auto;
 	overflow-x : hidden;
 	position : absolute;
@@ -229,19 +242,24 @@ div#investmentsHtml, div#loansHtml, div#tradeServicesHtml, div#hleBrokingHtml, d
 	font-size : 22;
 }
 
-.navBar ul{
-	overflow-y : hidden;
+.navBar{
 	overflow-x : auto;
-	width : 650px;
-	padding : 0 0 0 70;
-	margin : 0;
+	overflow-y : hidden;
 	position : absolute;
-	top : 38em;
-	left : 292;
-	background-color : #000055;
-	height : 30px;
-	box-shadow : 0 0 30px 5px white, 0 0 20px 2px #000055;
+	width : 60%;
+	height : 4.5%;
+	top : 87%;
+	left : 20%;
 	-ms-overflow-style: none;
+	box-shadow : 0 0 30px 5px white, 0 0 20px 2px #000055;
+	background-color : #000055;
+}
+
+.navBar ul{
+	width : 120%;
+	height : 3%;
+	margin : 0;
+	background-color : #000055;
 	animation: fadein 2s;
 }
 
@@ -250,21 +268,23 @@ div#investmentsHtml, div#loansHtml, div#tradeServicesHtml, div#hleBrokingHtml, d
 	text-decoration : none;
 	color : white;
 	background-color : #000055;
-	padding : 0.2em 0.6em;
+	padding : 1% 1% 1% 1%;
 	border : 0px;
-	height : 30px;
+	height : 80%;
 }
 
 .subTab{
+	overflow-x : auto;
 	border-bottom : 1px solid;
 	border-bottom-color : red;
+	width : 100%;
+	-ms-overflow-style: none;
 }
 
 .subTab ul{
-	width : 650px;
+	width : 100%;
 	padding : 0 0 0 70;
 	margin : 0;
-	position : relative;
 	height : 30px;
 }
 
@@ -281,3 +301,106 @@ div#investmentsHtml, div#loansHtml, div#tradeServicesHtml, div#hleBrokingHtml, d
 	box-shadow: 0px 0px 20px red;
 }
 /**/
+@media screen and (max-width: 960px){
+	/*logo*/
+	div#hlbLogo img{
+		padding : 0;
+		margin : 0;
+		position : absolute;
+		left : 0;
+		top : 0;
+		width : 100%;
+		height : 7%;
+		box-shadow : 0 0 30px 5px white, 0 0 30px 5px white;
+	}
+	
+	/*side image*/
+	div#sideImage img{
+		position : absolute;
+		left : 0;
+		top : 7%;
+		height : 93%;
+		width : 13.5%;
+		box-shadow : 0 0 30px 5px black, 0 0 30px 5px black;
+		z-index : -1;
+		animation: fadein 2s;
+	}
+	/*menu button and list*/
+	button#exploreBtn, button#closeBtn, button#backBtn, button#lang, button#closeLang{
+		height : 7.5%;
+		font-size : 13;
+	}
+	#menuList{
+		bottom : 16.9%;
+	}
+
+	#aboutList, #pfsList, #bcbList, #hlcList, #verList{
+		bottom : 16.9%;
+	}
+	
+	#langList{
+		bottom : 7.9%;
+	}
+	
+	#menuList button{
+		font-size : 11;
+	}
+
+	#pfsList a, #bcbList a, #hlcList a, #aboutList a, #verList a, #langList a{
+		font-size : 11;
+	}
+	.title{
+		font-size : 12;
+		padding-right : 20px;
+	}
+
+	.container{
+		width : 65%;
+		height : 85%;
+		left : 15%;
+		top : 10%;
+	}
+
+	.mainScrollBox{
+		width : 87%;
+	}
+
+	.scrollBox{
+		width : 87%;
+		height : 58%;
+	}
+
+	.container h1{
+		padding : 10 10 10 10;
+		font-size : 22;
+	}
+
+	.navBar{
+		width : 65%;
+		height : 3.7%;
+		top : 89%;
+		left : 15%;
+	}
+
+	.navBar ul{
+		width : 250%;
+		
+	}
+	
+	.navBar button{
+		padding : 0.55% 1% 0.55% 1%;
+	}
+
+	.subTab{
+		width : 95%;
+	}
+
+	.subTab ul{
+		width : 180%;
+	}
+	
+	div#coverflow{
+		right : 10%;
+		top : 13%;
+	}
+}

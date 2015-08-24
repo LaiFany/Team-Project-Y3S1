@@ -1,0 +1,75 @@
+<menu states="EXPLORE" states1="CLOSE" states2="BACK" states3 = "LANGUAGE">
+  
+	<menu label="About">
+    
+		<menu label="Story of Hong Leong Bank" data="storyHLB.php" type="html"/>
+  
+	</menu>
+  
+  
+	<menu label="Personal Finance Services">
+    
+		<menu label="Credit Cards" data="creditCards.php" type="slide"/>
+    
+		<menu label="Debit Cards" data="debitCards.php" type="html"/>
+    
+		<menu label="Fixed Deposits" data="fixedDeposits.php" type="html"/>
+    
+		<menu label="Deposits" data="deposits.php" type="html"/>
+    
+		<menu label="Bancassurance" data="bancassurance.php" type="html"/>
+    
+		<menu label="Loans" data="loans.php" type="html"/>
+    
+		<menu label="Priority Banking" data="priorityBanking.php" type="html"/>
+    
+		<menu label="Investments" data="investments.php" type="html"/>
+  
+	</menu>
+
+  
+	<menu label="Business &amp; Corporate Banking">
+    
+		<menu label="Business &amp; Corporate Loans" data="businessCorporateLoans.php" type="html"/>
+    
+		<menu label="Business Deposits" data="businessDeposits.php" type="html"/>
+    
+		<menu label="Trade Services" data="tradeServices.php" type="html"/>
+    
+		<menu label="Cash Management" data="cashManagement.php" type="html"/>
+    
+		<menu label="HLB SME" data="hlbSme.php" type="html"/>
+  
+	</menu>
+
+  
+	<menu label="Hong Leong Connect">
+    
+		<menu label="Online Banking" data="onlineBanking.php" type="html"/>
+    
+		<menu label="Mobile Banking" data="mobileBanking.php" type="html"/>
+    
+		<menu label="PEx Payment Express" data="pex.php" type="html"/>
+   
+		<menu label="HLe Broking" data="hleBroking.php" type="html"/>
+  
+	</menu>
+	
+	<menu label = "Version">
+		
+		<menu label = "Normal" data = "index.php" type = "html"/>
+		
+		<menu label = "Islamic" data = "islamIndex.php" type = "html"/>
+		
+	</menu>
+	
+	<menu label = "Language">
+	
+		<menu label = "English" data = "#" type = "html"/>
+		
+		<menu label = "Bahasa Malaysia" data = "#" type = "html"/>
+	
+	</menu>
+
+</menu>
+
